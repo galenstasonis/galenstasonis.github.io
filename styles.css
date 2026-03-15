@@ -94,13 +94,13 @@ input:checked + .slider:before {
 .buttons {
   border-radius: 5px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #032326;
   border: none;
   transition: background-color .3s, border .3s;
   position:relative;
   top: -145;
-  left: 530
+  left: -880;
 }
 
 .buttons:hover {
