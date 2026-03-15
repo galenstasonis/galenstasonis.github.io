@@ -95,13 +95,15 @@ input:checked + .slider:before {
   border-radius: 5px;
   padding: 10px;
   font-size: 15px;
+  color: #032326;
   border: none;
-  transition: background-color .3s;
+  transition: background-color .3s, border .3s;
 }
 
 .buttons:hover {
   background-color:#2196F3;
   border: 1px, solid white;
+  color: #032326;
   transition: background-color .3s, border .3s;
 }
 
