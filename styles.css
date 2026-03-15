@@ -12,7 +12,7 @@ body {
 body.dark {
    color: white;
    background: #032326;
-   transition: background 0.4s;
+   transition: background 0.5s;
 }
 /* css for darkmode switch */
 .switch {
