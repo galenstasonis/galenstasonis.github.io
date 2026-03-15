@@ -6,13 +6,13 @@ body {
     font-size: 20px;
     color: black;
     background: white;
-    transition: background 0.4s;
+    transition: background .5s, .5s;
 }
 
 body.dark {
    color: white;
    background: #032326; 
-   transition: background 0.4s;
+   transition: background .5s, color .5s;
 }
 /* css for darkmode switch */
 .switch {
@@ -78,9 +78,10 @@ input:checked + .slider:before {
   margin: 0;
   display: inline-block;
   position: absolute;
-  top: -80;
+  top: -76;
   left: 70;
-
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .rounded {
@@ -90,6 +91,24 @@ input:checked + .slider:before {
   top: -50;
 }
 
+.buttons {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  transition: background-color .3s;
+}
+
+.buttons:hover {
+  background-color:#2196F3;
+  border: 1px, solid white;
+  transition: background-color .3s, border .3s;
+}
+
+.buttonlocation {
+  display: flex;
+  align-items: center;
+}
 
 
 
