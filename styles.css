@@ -105,11 +105,6 @@ input:checked + .slider:before {
   transition: background-color .3s, border .3s;
 }
 
-.buttonlocation {
-  display: flex;
-  align-items: center;
-}
-
 
 
 
