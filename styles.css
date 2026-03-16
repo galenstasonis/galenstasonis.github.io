@@ -111,7 +111,8 @@ input:checked + .slider:before {
   transition: background-color .3s, border .3s;
   position:relative;
   top: -145;
-  left: -880;
+  left: 600;
+  z-index: 1000;
 }
 
 .buttons:hover {
