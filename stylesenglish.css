@@ -18,27 +18,23 @@ body.dark {
 }
 
 /* css for dark mode button/text */
-switch {
-  position: absolute;
-  display: inline-block;
-  top: -6vh;
-  left: 4%;
-  width: 60px;
-  height: 34px;
+.switch {
+  width: 2.344vw;
+  height: 2.361vh;
 
 }
 
 .switch input {
   position: absolute;
   opacity: 0;
-  width: 60px;
-  height: 34px;
+  width: 2.344vw;
+  height: 2.361vh;
 }
 
 .slider {
   position: absolute;
-  width: 60px;
-  height: 34px;
+  width: 2.344vw;
+  height: 2.361vh;
   cursor: pointer;
   background-color: #ccc;
   -webkit-transition: .4s;
@@ -48,10 +44,10 @@ switch {
 .slider:before {
   position: absolute;
   content: "";
-  top: 3px;
-  left: 4px;
-  height: 26px;
-  width: 26px;
+  top: 0.208vh;
+  left: 0.156vw;
+  height: 1.016vw;
+  width: 1.016vw;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -67,14 +63,14 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(1.016vw);
+  -ms-transform: translateX(1.016vw);
+  transform: translateX(1.016vw);
 }
 
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 2.361vw;
 }
 
 .slider.round:before {
@@ -91,23 +87,40 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-paragraph1 {
+#paragraph1 {
   width: 80%;
 }
 
 /*topbar css*/
 #topbar {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  background-color: rgb(209, 192, 192); 
+  transition: background-color .5s;
+  transition: color .5s;
+}
+
+body.dark #topbar {
+  background-color: #062c2f;
 }
 
 #iceland {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 
 #darkmodebutton {
-  order: -1;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+#darkmodebutton p {
+  margin: 30px;
 }
