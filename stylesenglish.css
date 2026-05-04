@@ -30,8 +30,6 @@ switch {
 
 .switch input {
   position: absolute;
-  top: 0px;
-  left: 0px;
   opacity: 0;
   width: 60px;
   height: 34px;
@@ -42,10 +40,6 @@ switch {
   width: 60px;
   height: 34px;
   cursor: pointer;
-  top: 5.2vh;
-  left: 40vw;
-  right: 0;
-  bottom: 0;
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
@@ -54,10 +48,10 @@ switch {
 .slider:before {
   position: absolute;
   content: "";
+  top: 3px;
+  left: 4px;
   height: 26px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -87,22 +81,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.darkmodetext {
-  margin: 0;
-  position: absolute;
-  white-space: nowrap;
-  overflow: hidden;
-  top: 6vh;
-  left: 29vw;
-}
-
-.rounded {
-  border: 3px solid;
-  border-radius: 5px;
-  position: absolute;
-  top: -50;
-}
-
 /* text css */
 #textcontainer1 {
   display: flex;
@@ -117,11 +95,19 @@ paragraph1 {
   width: 80%;
 }
 
-/*header css*/
-#iceland {
+/*topbar css*/
+#topbar {
   display: flex;
   width: 100vw;
   height: 100vh;
   justify-content: center;
-  align-items: flext-start;
+}
+
+#iceland {
+  display: flex;
+}
+
+
+#darkmodebutton {
+  order: -1;
 }
