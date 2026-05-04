@@ -94,33 +94,123 @@ input:checked + .slider:before {
 /*topbar css*/
 #topbar {
   display: flex;
-  justify-content: center;
+  padding: clamp(8px, 2vw, 20px) clamp(12px, 3vw, 32px);
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
   box-sizing: border-box;
-  background-color: rgb(209, 192, 192); 
-  transition: background-color .5s;
-  transition: color .5s;
+  background-color: rgb(209, 192, 192);
+  transition: background-color .5s, color .5s;
+  position: sticky;   
+  top: 0;
+  z-index: 1000;      
+    min-height: clamp(50px, 8vh, 80px);
 }
 
 body.dark #topbar {
-  background-color: #062c2f;
+   background-color: #062c2f;
 }
 
 #iceland {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  white-space: nowrap;
+  margin: 0;
+}
+
+#iceland h1 {
+  margin: 0;          
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
 }
 
 
 #darkmodebutton {
   display: flex;
+  flex-direction: row;   
   align-items: center;
-  gap: 0px;
+  gap: 8px;
 }
 
 #darkmodebutton p {
-  margin: 30px;
+  margin: 0;          
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  white-space: nowrap;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 1vw, 6px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: clamp(6px, 1.5vw, 10px);
+  position: relative;
+  z-index: 1001;      
+  flex-shrink: 0;     
+}
+
+.hamburger span {
+  display: block;
+  width: clamp(20px, 3vw, 30px);   
+  height: clamp(2px, 0.4vw, 4px);
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(calc(clamp(4px, 1vw, 6px) + clamp(2px, 0.4vw, 4px))) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(calc(-1 * (clamp(4px, 1vw, 6px) + clamp(2px, 0.4vw, 4px)))) rotate(-45deg); }
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -350px;        
+  width: 350px;
+  height: 100vh;       
+  background: #0d3b38; 
+  list-style: none;
+  padding: 80px 0 0 0; 
+  padding-top: clamp(60px, 10vh, 100px);
+  margin: 0;
+  background: #081f1d;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.nav-menu.open {
+  left: 0;             
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 14px 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.overlay {
+  display: block;        
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;            
+  pointer-events: none;  
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;   
 }

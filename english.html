@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesenglish.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galen's English Project</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesenglish.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galen's English Project</title>
 </head>
 <body class="dark">
+
 <div id="topbar">
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <div id="iceland">
-  <h1>Iceland</h1>
+    <h1>Iceland</h1>
   </div>
 
-<div id="darkmodebutton">
-  <p>Dark/Light Mode</p>
-  <label class="switch">
-  <input onchange="switchTheme()" type="checkbox" id="theme-switch" class="checkbox">
-  <span class="slider round"></span>
-  </label>
+  <div id="darkmodebutton">
+    <p>Dark/Light Mode</p>
+    <label class="switch">
+      <input onchange="switchTheme()" type="checkbox" id="theme-switch" class="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
 </div>
-</div>
-<script src=main.js></script>
+
+<div class="overlay" id="overlay"></div>
+<ul class="nav-menu" id="nav-menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<script src="main.js"></script>
+<script src="hamburger.js"></script>
+
 <div id="textcontainer1">
   <div id="paragraph1">
     <p>toiletwater</p>
   </div>
 </div>
+
 </body>
 </html>
