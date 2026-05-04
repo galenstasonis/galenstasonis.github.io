@@ -8,8 +8,6 @@ body {
     color: black;
     background: white;
     transition: background .5s, .5s;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -18,73 +16,7 @@ body.dark {
    background: #032326; 
    transition: background .5s, color .5s;
 }
-/* css for hamburger menu */
-nav {
-  padding: 1rem;
-  position: absolute;
-  bottom:210px;
-}
 
-.hamburger-menu {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  cursor: pointer;
-  padding: 1rem;
-}
-
-
-.ham-bar {
-  width: 70%;
-  height: 4px;
-  background-color: grey;
-  border-radius: 25px;
-  position: absolute;
-  top: -64vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform .6s, opacity .8s, top .6s;
-}
-
-
-.bar-top {
-  top: -61.5vh;
-}
-
-.bar-bottom {
-  top: -59vh;
-}
-
-.hamburger-menu.active .bar-top {
-  transform: translate(-50%, -50%) rotate(-315deg);
-  top: -62vh;
-}
-
-.hamburger-menu.active .bar-mid {
-  opacity: 0;
-}
-
-.hamburger-menu.active .bar-bottom {
-  transform: translate(-50%, -50%) rotate(-225deg);
-  top: -62vh;
-}
-
-.off-screen-menu {
-  position:fixed;
-  top: 0;
-  left: -80%;
-  background-color: #032326;
-  border:3px solid #2196F3;
-  border-top: none;
-  height: 100vh;
-  width: 75vw;
-  transition: left .5s;
-
-}
-
-.off-screen-menu.active {
-  left: -60%;
-}
 /* css for dark mode button/text */
 switch {
   position: absolute;
@@ -95,7 +27,6 @@ switch {
   height: 34px;
 
 }
-
 
 .switch input {
   position: absolute;
@@ -172,6 +103,25 @@ input:checked + .slider:before {
   top: -50;
 }
 
-.paragraph1 {
+/* text css */
+#textcontainer1 {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  border: 0px;
+  justify-content: center;
+  align-items: center;
+}
 
+paragraph1 {
+  width: 80%;
+}
+
+/*header css*/
+#iceland {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flext-start;
 }
