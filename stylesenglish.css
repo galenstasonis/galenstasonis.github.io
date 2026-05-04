@@ -214,3 +214,31 @@ body.dark #topbar {
   opacity: 1;
   pointer-events: all;   
 }
+
+body.dark .nav-menu {
+  background: #081f1d;
+}
+
+body:not(.dark) .nav-menu {
+  background: #d1c0c0; /
+}
+
+body:not(.dark) .nav-menu li a {
+  color: #000;
+}
+
+body:not(.dark) .nav-menu li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark .hamburger span {
+  background: #ffffff;
+}
+
+body:not(.dark) .hamburger span {
+  background: #000000;
+}
+
+body:not(.dark) .overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
