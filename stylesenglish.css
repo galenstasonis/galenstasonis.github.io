@@ -149,7 +149,7 @@ body.dark #topbar {
   cursor: pointer;
   padding: clamp(6px, 1.5vw, 10px);
   position: relative;
-  z-index: 1001;      
+  z-index: 1002;      
   flex-shrink: 0;     
 }
 
@@ -179,7 +179,7 @@ body.dark #topbar {
   margin: 0;
   background: #081f1d;
   transition: left 0.3s ease;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-menu.open {
