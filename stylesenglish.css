@@ -243,3 +243,9 @@ body:not(.dark) .hamburger span {
 body:not(.dark) .overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+#contactgif {
+ position:absolute;
+ top: 20vh;
+ right: 43%;
+}
